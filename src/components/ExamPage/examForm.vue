@@ -8,7 +8,7 @@
         <v-col cols="12" class="d-flex align-center justify-center">
           <v-card
             color="#0f172a"
-            class="px-3 py-5 d-flex align-center justify-center"
+            class="register-card px-3 py-5 d-flex align-center justify-center"
             style="width: 50%"
           >
             <form action="" @submit.prevent="showForm = true">
@@ -617,6 +617,12 @@ const timeLimit = () => {
     &:hover {
       box-shadow: 1px 1px 20px #20bf55 !important;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .v-card {
+    width: 100% !important;
   }
 }
 </style>
