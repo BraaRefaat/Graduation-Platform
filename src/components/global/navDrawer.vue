@@ -5,7 +5,7 @@
       v-model="drawer"
       location="right"
       temporary
-      class="py-5"
+      class="py-5 pr-5"
       style="width: fit-content; transition: 0.4s all ease-in-out"
     >
       <div class="nav-btn d-flex align-center justify-start">

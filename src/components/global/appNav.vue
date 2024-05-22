@@ -3,7 +3,7 @@
     <v-app-bar color="#0F172A" height="110" elevation="0">
       <v-container>
         <v-row dir="rtl">
-          <v-col cols="3" class="d-flex justify-start align-center">
+          <v-col cols="3" class="d-flex justify-start align-center pr-10">
             <v-app-bar-nav-icon
               color="#20BF55"
               variant="outlined"

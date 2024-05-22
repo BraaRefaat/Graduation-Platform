@@ -1,6 +1,6 @@
 <template>
   <div class="course-goals">
-    <v-container>
+    <v-container class="my-10">
       <v-row dir="rtl">
         <v-col
           cols="12"
@@ -13,7 +13,12 @@
         </v-col>
         <v-row class="mt-10">
           <v-row>
-            <v-col cols="12" data-aos="fade-up" data-aos-duration="1000">
+            <v-col
+              cols="12"
+              class="px-10"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <v-window v-model="window" show-arrows reverse>
                 <template v-slot:prev="{ props }">
                   <v-btn
@@ -39,7 +44,7 @@
                     height="200px"
                     class="d-flex justify-center align-center"
                   >
-                    <span class="text-h3">{{ goal }}</span>
+                    <span class="goals-text">{{ goal }}</span>
                   </v-card>
                 </v-window-item>
               </v-window>
@@ -62,52 +67,90 @@ const goals = ref([
 ]);
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .course-goals {
-  height: 80vh;
-  h2 {
-    width: fit-content;
-    color: #e8e5da;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 800;
-  }
-
-  h2::before {
-    margin-right: auto;
-  }
-
-  h2::after,
-  h2::before {
-    content: "";
-    width: 0%;
-    height: 4px;
-    background: #20bf55;
-    display: block;
-    transition: 0.5s;
-  }
-
-  h2:hover::after,
-  h2:hover::before {
-    width: 100%;
-  }
-  .v-window {
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px #20bf55;
-    transition: 0.4s all ease-in-out;
-    &:hover {
-      box-shadow: 1px 1px 20px #20bf55 !important;
+  .v-container {
+    height: 100%;
+    h2 {
+      width: fit-content;
+      color: #e8e5da;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 800;
     }
-    .v-card {
-      background: #0f172a;
-      span {
-        font-family: cairo;
-        color: #e8e5da;
-        letter-spacing: normal;
-        &:hover {
-          cursor: text;
+
+    h2::before {
+      margin-right: auto;
+    }
+
+    h2::after,
+    h2::before {
+      content: "";
+      width: 0%;
+      height: 4px;
+      background: #20bf55;
+      display: block;
+      transition: 0.5s;
+    }
+
+    h2:hover::after,
+    h2:hover::before {
+      width: 100%;
+    }
+    .v-window {
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px #20bf55;
+      transition: 0.4s all ease-in-out;
+      &:hover {
+        box-shadow: 1px 1px 20px #20bf55 !important;
+      }
+      .v-card {
+        background: #0f172a;
+        span {
+          font-family: cairo;
+          color: #e8e5da;
+          letter-spacing: normal;
+          &:hover {
+            cursor: text;
+          }
         }
       }
+    }
+  }
+}
+
+/* media queries */
+
+@media (max-width: 600px) {
+  .v-card {
+    .goals-text {
+      font-size: 20px !important;
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .v-card {
+    .goals-text {
+      font-size: 30px !important;
+      width: 70%;
+    }
+  }
+}
+@media (min-width: 980px) {
+  .v-card {
+    .goals-text {
+      font-size: 35px !important;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .v-card {
+    .goals-text {
+      font-size: 45px !important;
+      width: 100%;
     }
   }
 }

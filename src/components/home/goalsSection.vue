@@ -1,6 +1,6 @@
 <template>
   <div class="goals-section">
-    <v-container>
+    <v-container style="height: 100%">
       <v-row dir="rtl">
         <v-col
           cols="12"
@@ -19,7 +19,7 @@
               md="6"
               lg="6"
               xl="6"
-              class="px-8"
+              class="px-8 d-flex flex-column align-center justify-center"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -54,7 +54,7 @@
               md="6"
               lg="6"
               xl="6"
-              class="px-8"
+              class="px-8 d-flex flex-column align-center justify-center"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -91,7 +91,7 @@
               md="6"
               lg="6"
               xl="6"
-              class="px-8"
+              class="px-8 d-flex flex-column align-center justify-center"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -126,7 +126,7 @@
               md="6"
               lg="6"
               xl="6"
-              class="px-8"
+              class="px-8 d-flex flex-column align-center justify-center"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -170,9 +170,13 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .goals-section {
-  height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 30px 0;
+
   h2 {
     width: fit-content;
     color: #e8e5da;
@@ -200,7 +204,7 @@ onMounted(() => {
     width: 100%;
   }
   .v-card {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     box-shadow: 2px 2px 10px #20bf55;
     transition: 0.4s all ease-in-out;
@@ -212,16 +216,12 @@ onMounted(() => {
 }
 
 /* media queries */
-
-@media (max-width: 600px) {
-  .goals-section {
-    height: 140vh;
-  }
-}
-
 @media (max-width: 960px) {
-  .goals-section {
-    height: 130vh;
+  .v-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>

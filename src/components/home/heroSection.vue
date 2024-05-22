@@ -25,7 +25,7 @@ import VueWriter from "vue-writer";
 
 <style lang="scss">
 .hero-section {
-  height: 80vh;
+  height: 100vh;
   h1 {
     color: #e8e5da;
     font-size: 35px;

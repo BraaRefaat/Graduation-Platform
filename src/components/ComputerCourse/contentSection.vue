@@ -13,24 +13,34 @@
         </v-col>
         <v-row class="mt-10">
           <v-row>
-            <v-col cols="12" data-aos="fade-up" data-aos-duration="1000">
-              <v-card color="#0f172a">
+            <v-col
+              cols="12"
+              dir="rtl"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              class="d-flex align-center justify-center"
+            >
+              <v-card class="content-card" color="#0f172a">
                 <v-tabs
+                  dir="ltr"
                   v-model="tab"
                   bg-color="#0f172a"
                   color="#20BF55"
                   slider-color="#20BF55"
+                  show-arrows
+                  prev-icon="mdi-chevron-left"
+                  next-icon="mdi-chevron-right"
                   selected-class="font-weight-bold"
                 >
-                  <v-tab value="one">تعريف الحاسب الآلي</v-tab>
+                  <v-tab value="seven">الاختبار</v-tab>
+                  <v-tab value="six">خاتمة</v-tab>
+                  <v-tab value="five">مهارات استخدام الحاسب الآلي</v-tab>
+                  <v-tab value="four">استخدامات الحاسب الآلي</v-tab>
+                  <v-tab value="three">وظائف الحاسب الآلي</v-tab>
                   <v-tab value="two" @click="loadImage"
                     >مكونات الحاسب الآلي</v-tab
                   >
-                  <v-tab value="three">وظائف الحاسب الآلي</v-tab>
-                  <v-tab value="four">استخدامات الحاسب الآلي</v-tab>
-                  <v-tab value="five">مهارات استخدام الحاسب الآلي</v-tab>
-                  <v-tab value="six">خاتمة</v-tab>
-                  <v-tab value="seven">الاختبار</v-tab>
+                  <v-tab value="one">تعريف الحاسب الآلي</v-tab>
                 </v-tabs>
                 <v-divider
                   color="#e8e5da"
@@ -262,89 +272,147 @@ const loadImage = () => {
 
 <style lang="scss">
 .content-section {
-  height: auto;
-  h2 {
-    width: fit-content;
-    color: #e8e5da;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 800;
-  }
-
-  h2::before {
-    margin-right: auto;
-  }
-
-  h2::after,
-  h2::before {
-    content: "";
-    width: 0%;
-    height: 4px;
-    background: #20bf55;
-    display: block;
-    transition: 0.5s;
-  }
-
-  h2:hover::after,
-  h2:hover::before {
-    width: 100%;
-  }
-  .v-card {
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px #20bf55;
-    transition: 0.4s all ease-in-out;
-    &:hover {
-      box-shadow: 1px 1px 20px #20bf55 !important;
+  .v-container {
+    height: auto;
+    h2 {
+      width: fit-content;
+      color: #e8e5da;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 800;
     }
-    .v-tabs {
-      .v-tab {
-        letter-spacing: normal;
-        color: #e8e5da;
+
+    h2::before {
+      margin-right: auto;
+    }
+
+    h2::after,
+    h2::before {
+      content: "";
+      width: 0%;
+      height: 4px;
+      background: #20bf55;
+      display: block;
+      transition: 0.5s;
+    }
+
+    h2:hover::after,
+    h2:hover::before {
+      width: 100%;
+    }
+    .content-card {
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px #20bf55;
+      transition: 0.4s all ease-in-out;
+      &:hover {
+        box-shadow: 1px 1px 20px #20bf55 !important;
       }
-    }
-    .v-card-text {
-      .v-window {
-        .v-window-item {
-          font-size: 24px;
-          line-height: normal;
+      .v-slide-group__content {
+        justify-content: flex-end !important;
+      }
+      .v-tabs {
+        .v-tab {
           letter-spacing: normal;
           color: #e8e5da;
-          &:hover {
-            cursor: text;
-          }
-          .v-list {
-            background-color: #0f172a;
+        }
+      }
+      .v-card-text {
+        .v-window {
+          .v-window-item {
             font-size: 24px;
             line-height: normal;
             letter-spacing: normal;
             color: #e8e5da;
-            text-align: right;
-            .v-list-items {
-              .v-list-item {
-                &:hover {
-                  cursor: text;
+            &:hover {
+              cursor: text;
+            }
+            .v-list {
+              background-color: #0f172a;
+              font-size: 24px;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #e8e5da;
+              text-align: right;
+              .v-list-items {
+                .v-list-item {
+                  &:hover {
+                    cursor: text;
+                  }
                 }
               }
             }
+            .v-checkbox .v-selection-control {
+              justify-content: right;
+              direction: rtl !important;
+              color: #e8e5da;
+            }
+            .v-input {
+              .v-input__details {
+                display: none;
+              }
+            }
           }
-          .v-checkbox .v-selection-control {
-            justify-content: right;
-            direction: rtl !important;
-            color: #e8e5da;
+        }
+      }
+    }
+    .v-list-item__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+/* media queries */
+
+@media (max-width: 600px) {
+  .content-card {
+    max-width: 400px !important;
+    min-width: 300px !important;
+    .v-card-text {
+      .v-window {
+        .v-window-item {
+          font-size: 18px !important;
+          .v-list {
+            font-size: 18px !important;
           }
-          .v-input {
-            .v-input__details {
-              display: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .content-card {
+      max-width: 570px !important;
+      min-width: 500px !important;
+      .v-card-text {
+        .v-window {
+          .v-window-item {
+            font-size: 20px !important;
+            .v-list {
+              font-size: 20px !important;
             }
           }
         }
       }
     }
   }
-  .v-list-item__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @media (min-width: 800px) {
+    .content-card {
+      max-width: 700px !important;
+    }
+  }
+  @media (min-width: 980px) {
+    .content-card {
+      max-width: 800px !important;
+      min-width: 700px !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    .content-card {
+      max-width: 100% !important;
+      min-width: 970px !important;
+    }
   }
 }
 </style>
