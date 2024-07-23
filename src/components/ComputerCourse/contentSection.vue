@@ -11,10 +11,14 @@
             <span>محتويات الدروس</span>
           </h2>
         </v-col>
-        <v-row class="mt-10">
-          <v-row>
+        <v-row class="mt-10 d-flex align-center justify-center w-100">
+          <v-row class="d-flex align-center justify-center" style="width: 100%">
             <v-col
-              cols="12"
+              cols="11"
+              sm="11"
+              md="12"
+              lg="12"
+              xl="12"
               dir="rtl"
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -55,7 +59,7 @@
                       معلومات مفيدة. يُعرف أيضًا باسم "الكمبيوتر" أو "الحاسوب"
                     </v-window-item>
 
-                    <v-window-item value="two">
+                    <v-window-item value="two" class="components-content">
                       <v-list>
                         <v-list-items
                           v-for="(compComponent, i) in compComponents"
@@ -65,13 +69,21 @@
                             <v-container>
                               <v-row dir="rtl">
                                 <v-col
-                                  cols="8"
+                                  cols="12"
+                                  sm="12"
+                                  md="8"
+                                  lg="8"
+                                  xl="8"
                                   class="d-flex align-center justify-center"
                                 >
                                   <p>{{ compComponent.content }}</p>
                                 </v-col>
                                 <v-col
-                                  cols="4"
+                                  cols="12"
+                                  sm="12"
+                                  md="4"
+                                  lg="4"
+                                  xl="4"
                                   class="d-flex align-center justify-center"
                                   v-if="loading == true"
                                 >
@@ -82,7 +94,11 @@
                                   ></v-skeleton-loader>
                                 </v-col>
                                 <v-col
-                                  cols="4"
+                                  cols="12"
+                                  sm="12"
+                                  md="4"
+                                  lg="4"
+                                  xl="4"
                                   class="d-flex align-center justify-center"
                                   v-if="loading == false"
                                 >
@@ -91,7 +107,7 @@
                                       :src="
                                         require(`@/assets/${compComponent.image}`)
                                       "
-                                      width="300"
+                                      style="width: 100%"
                                       height="200"
                                       class="rounded-xl"
                                       alt=""
@@ -116,18 +132,25 @@
                                   prepend-icon="mdi-youtube"
                                   base-color="#e8e5da"
                                   active-color="#20BF55"
-                                  title="فيديو شرح للمكونات المادية للحاسب الآلي"
-                                ></v-list-item>
+                                  class="video-btn"
+                                >
+                                  <v-list-item-title
+                                    >فاصلي إعلاني لي
+                                    <span style="font-size: 25px"
+                                      >😁</span
+                                    ></v-list-item-title
+                                  >
+                                </v-list-item>
                               </template>
 
                               <v-list-item
-                                class="d-flex align-center justify-center mt-8"
+                                class="video-frame d-flex align-center justify-center mt-8"
                               >
                                 <iframe
-                                  width="853"
+                                  style="width: 100%"
                                   height="480"
-                                  src="https://www.youtube.com/embed/TBDLPJmMm8E"
-                                  title="مكونات الكمبيوتر"
+                                  src="https://www.youtube.com/embed/mr1vo8t5OYU"
+                                  title="أحد أعمالي كمطور Front End Developer 😁👀💻"
                                   frameborder="0"
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                   referrerpolicy="strict-origin-when-cross-origin"
@@ -352,6 +375,19 @@ const loadImage = () => {
               }
             }
           }
+          .video-frame {
+            padding-inline-start: 16px !important;
+            .v-list-item__content {
+              width: 100% !important;
+              height: min-content !important;
+              border-radius: 20px;
+              iframe {
+                .ytp-cued-thumbnail-overlay-image {
+                  background-size: contain !important;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -364,54 +400,28 @@ const loadImage = () => {
 }
 
 /* media queries */
-
 @media (max-width: 600px) {
   .content-card {
-    max-width: 400px !important;
-    min-width: 300px !important;
-    .v-card-text {
-      .v-window {
-        .v-window-item {
+    margin: 0 10px;
+    .v-window {
+      .v-window-item {
+        font-size: 18px !important;
+        .v-list-item {
           font-size: 18px !important;
-          .v-list {
-            font-size: 18px !important;
-          }
+          text-align: center;
+          line-height: 200%;
         }
       }
-    }
-  }
-
-  @media (min-width: 600px) {
-    .content-card {
-      max-width: 570px !important;
-      min-width: 500px !important;
-      .v-card-text {
-        .v-window {
-          .v-window-item {
-            font-size: 20px !important;
-            .v-list {
-              font-size: 20px !important;
-            }
-          }
+      .components-content {
+        .v-list-item {
+          text-align: center;
         }
       }
-    }
-  }
-  @media (min-width: 800px) {
-    .content-card {
-      max-width: 700px !important;
-    }
-  }
-  @media (min-width: 980px) {
-    .content-card {
-      max-width: 800px !important;
-      min-width: 700px !important;
-    }
-  }
-  @media (min-width: 1280px) {
-    .content-card {
-      max-width: 100% !important;
-      min-width: 970px !important;
+      .v-list-item-title {
+        text-wrap: wrap !important;
+        line-height: 200%;
+        font-size: 14px !important;
+      }
     }
   }
 }

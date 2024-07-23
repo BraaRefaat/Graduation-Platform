@@ -474,7 +474,7 @@ const score = ref(0);
 provide("userData", { name, age, email, score });
 const submitMessage = ref(false);
 const completeMessage = ref(false);
-const showForm = ref(false);
+const showForm = ref(true);
 const quesAnswer1 = ref(null);
 const quesAnswer2 = ref(null);
 const quesAnswer3 = ref(null);
@@ -621,8 +621,31 @@ const timeLimit = () => {
 }
 
 @media (max-width: 600px) {
+  .v-col,
+  .v-selection-control {
+    padding: 5px !important;
+  }
   .v-card {
     width: 100% !important;
+    form {
+      width: 100%;
+      p {
+        font-size: 16px !important;
+      }
+    }
+  }
+  .exam-container {
+    h2 {
+      font-size: 24px !important;
+    }
+    ul {
+      padding: 15px 20px 35px 0 !important;
+      li {
+        color: #e8e5da;
+        font-size: 20px;
+        line-height: normal;
+      }
+    }
   }
 }
 </style>

@@ -204,7 +204,7 @@ onMounted(() => {
     width: 100%;
   }
   .v-card {
-    width: 90%;
+    width: 90% !important;
     border-radius: 8px;
     box-shadow: 2px 2px 10px #20bf55;
     transition: 0.4s all ease-in-out;
@@ -212,10 +212,14 @@ onMounted(() => {
       transform: scale(1.1);
       box-shadow: 1px 1px 20px #20bf55 !important;
     }
+    .v-card-title {
+      text-wrap: wrap;
+    }
   }
 }
 
 /* media queries */
+
 @media (max-width: 960px) {
   .v-container {
     display: flex;
