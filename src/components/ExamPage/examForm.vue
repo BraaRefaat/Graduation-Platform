@@ -474,7 +474,7 @@ const score = ref(0);
 provide("userData", { name, age, email, score });
 const submitMessage = ref(false);
 const completeMessage = ref(false);
-const showForm = ref(true);
+const showForm = ref(false);
 const quesAnswer1 = ref(null);
 const quesAnswer2 = ref(null);
 const quesAnswer3 = ref(null);
