@@ -135,7 +135,7 @@
                                   class="video-btn"
                                 >
                                   <v-list-item-title
-                                    >فاصلي إعلاني لي
+                                    >فيديو شرح للمكونات المادية للحاسب الآلي
                                     <span style="font-size: 25px"
                                       >😁</span
                                     ></v-list-item-title
@@ -146,14 +146,14 @@
                               <v-list-item
                                 class="video-frame d-flex align-center justify-center mt-8"
                               >
-                                <iframe
-                                  style="width: 100%"
-                                  height="480"
-                                  src="https://www.youtube.com/embed/mr1vo8t5OYU"
-                                  title="أحد أعمالي كمطور Front End Developer 😁👀💻"
-                                  frameborder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                  referrerpolicy="strict-origin-when-cross-origin"
+                                <iframe 
+                                  style="width: 100%" 
+                                  height="480" 
+                                  src="https://www.youtube.com/embed/TBDLPJmMm8E?si=YpEJF6ksvcjcb8mD" 
+                                  title="YouTube video player" 
+                                  frameborder="0" 
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                  referrerpolicy="strict-origin-when-cross-origin" 
                                   allowfullscreen
                                 ></iframe>
                               </v-list-item>
