@@ -2,7 +2,7 @@
   <v-dialog
     v-model="completeMessage"
     persistent
-    style="width: 40%; font-family: cairo"
+    style="width: 40%; font-family: khebrat"
   >
     <v-card
       class="text-center flex-column align-center py-7"

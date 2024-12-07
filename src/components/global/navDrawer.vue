@@ -3,10 +3,10 @@
     <v-navigation-drawer
       color="#0F172A"
       v-model="drawer"
-      location="right"
+      location="left"
       temporary
       class="py-5 pr-5"
-      style="width: fit-content; transition: 0.4s all ease-in-out"
+      style="width: 350px"
     >
       <div class="nav-btn d-flex align-center justify-start">
         <v-btn color="#20BF55" @click="drawer = !drawer" variant="flat">
@@ -24,19 +24,21 @@
           <v-list-group value="courses" dir="rtl">
             <template v-slot:activator="{ props }">
               <v-list-item
+                class="text-right"
                 v-bind="props"
                 prepend-icon="mdi-human-male-board"
-                title="الدروس التعليمية"
-              ></v-list-item>
+                >الكورسات التعليمية</v-list-item
+              >
             </template>
 
             <v-list-item
               class="d-flex align-center justify-end"
+              style="background: #1a253d"
               append-icon="mdi-desktop-classic"
-              title="دروس أساسيات الحاسب الآلي"
               dir="ltr"
               @click="$router.push({ name: 'computer_course' })"
-            ></v-list-item>
+              >كورس أساسيات الحاسب الآلي</v-list-item
+            >
           </v-list-group>
         </v-list-items>
       </v-list>
@@ -61,8 +63,16 @@ onMounted(() => {
 <style lang="scss">
 .nav-drawer {
   .v-btn {
-    width: 80% !important;
+    width: 30% !important;
     border-radius: 0 5px 5px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .nav-drawer {
+    .v-navigation-drawer {
+      width: 90% !important;
+    }
   }
 }
 </style>

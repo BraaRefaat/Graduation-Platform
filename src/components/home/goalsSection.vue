@@ -1,6 +1,9 @@
 <template>
   <div class="goals-section">
-    <v-container style="height: 100%">
+    <v-container
+      style="height: 100%"
+      class="d-flex align-center justify-center"
+    >
       <v-row dir="rtl">
         <v-col
           cols="12"
@@ -24,7 +27,12 @@
               data-aos-duration="1000"
             >
               <v-card color="#0f172a" class="px-3 py-4">
-                <v-icon size="50">mdi-quality-high</v-icon>
+                <v-icon
+                  size="50"
+                  data-aos="zoom-in-down"
+                  data-aos-duration="1500"
+                  >mdi-quality-high</v-icon
+                >
                 <v-card-title
                   style="
                     color: #20bf55;
@@ -32,6 +40,8 @@
                     font-size: 20px;
                     font-weight: 800;
                   "
+                  data-aos="zoom-in-up"
+                  data-aos-duration="800"
                 >
                   تقديم محتوى تعليمي عالي الجودة
                 </v-card-title>
@@ -42,6 +52,8 @@
                     font-size: 17px;
                     font-weight: 1000;
                   "
+                  data-aos="zoom-in-left"
+                  data-aos-duration="1800"
                 >
                   نسعى لتوفير محتوى تعليمي دقيق ومُحدث يلبي احتياجات الطلاب في
                   مختلف المراحل الدراسية
@@ -59,7 +71,12 @@
               data-aos-duration="1000"
             >
               <v-card color="#0f172a" class="px-3 py-4">
-                <v-icon size="50">mdi-book-education-outline</v-icon>
+                <v-icon
+                  size="50"
+                  data-aos="zoom-in-down"
+                  data-aos-duration="1500"
+                  >mdi-book-education-outline</v-icon
+                >
                 <v-card-title
                   style="
                     color: #20bf55;
@@ -67,6 +84,8 @@
                     font-size: 20px;
                     font-weight: 800;
                   "
+                  data-aos="zoom-in-up"
+                  data-aos-duration="800"
                 >
                   تسهيل عملية التعلم
                 </v-card-title>
@@ -77,6 +96,8 @@
                     font-size: 17px;
                     font-weight: 1000;
                   "
+                  data-aos="zoom-in-left"
+                  data-aos-duration="1800"
                 >
                   نستخدم أحدث تقنيات التعليم الإلكتروني لتسهيل عملية التعلم
                   وجعلها أكثر تفاعلية
@@ -96,7 +117,12 @@
               data-aos-duration="1000"
             >
               <v-card color="#0f172a" class="px-3 py-4">
-                <v-icon size="50">mdi-emoticon-excited-outline</v-icon>
+                <v-icon
+                  size="50"
+                  data-aos="zoom-in-down"
+                  data-aos-duration="1500"
+                  >mdi-emoticon-excited-outline</v-icon
+                >
                 <v-card-title
                   style="
                     color: #20bf55;
@@ -104,6 +130,8 @@
                     font-size: 20px;
                     font-weight: 800;
                   "
+                  data-aos="zoom-in-up"
+                  data-aos-duration="800"
                 >
                   إثارة شغف التعلم
                 </v-card-title>
@@ -114,6 +142,8 @@
                     font-size: 17px;
                     font-weight: 1000;
                   "
+                  data-aos="zoom-in-left"
+                  data-aos-duration="1800"
                 >
                   نسعى لخلق بيئة تعليمية ممتعة ومُحفزة تُشجع الطلاب على التعلم
                   واكتشاف المزيد
@@ -131,7 +161,12 @@
               data-aos-duration="1000"
             >
               <v-card color="#0f172a" class="px-3 py-4">
-                <v-icon size="50">mdi-account-school-outline</v-icon>
+                <v-icon
+                  size="50"
+                  data-aos="zoom-in-down"
+                  data-aos-duration="1500"
+                  >mdi-account-school-outline</v-icon
+                >
                 <v-card-title
                   style="
                     color: #20bf55;
@@ -139,6 +174,8 @@
                     font-size: 20px;
                     font-weight: 800;
                   "
+                  data-aos="zoom-in-up"
+                  data-aos-duration="800"
                 >
                   دعم الطلاب في رحلتهم التعليمية
                 </v-card-title>
@@ -149,6 +186,8 @@
                     font-size: 17px;
                     font-weight: 1000;
                   "
+                  data-aos="zoom-in-left"
+                  data-aos-duration="1800"
                 >
                   نقدم للطلاب مختلف أدوات الدعم والمساعدة التي يحتاجونها للنجاح
                   في دراستهم

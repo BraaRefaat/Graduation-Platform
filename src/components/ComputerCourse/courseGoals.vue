@@ -8,7 +8,7 @@
           data-aos="fade-down"
         >
           <h2>
-            <span>أهداف الدروس</span>
+            <span>أهداف الكورس</span>
           </h2>
         </v-col>
         <v-row class="mt-10">
@@ -107,7 +107,6 @@ const goals = ref([
       .v-card {
         background: #0f172a;
         span {
-          font-family: cairo;
           color: #e8e5da;
           letter-spacing: normal;
           &:hover {

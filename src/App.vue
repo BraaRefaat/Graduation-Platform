@@ -66,7 +66,7 @@
               enable: true,
               area: 800,
             },
-            value: 25,
+            value: 15,
           },
           opacity: {
             value: 0.5,
@@ -103,8 +103,12 @@ const particlesLoaded = async (container) => {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: khebrat;
+  src: url(../public/Fonts/18\ Khebrat\ Musamim\ Regular.ttf);
+}
 #app {
-  font-family: cairo;
+  font-family: khebrat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

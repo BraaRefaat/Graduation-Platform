@@ -3,15 +3,20 @@
     <v-app-bar color="#0F172A" height="110" elevation="0">
       <v-container>
         <v-row dir="rtl">
-          <v-col cols="3" class="d-flex justify-start align-center pr-10">
+          <v-col cols="3" class="d-flex align-center justify-start">
+            <img
+              src="../../assets/Graduation_logo.png"
+              @click="$router.push({ name: 'home' })"
+              width="150"
+              alt=""
+            />
+          </v-col>
+          <v-col cols="9" class="d-flex justify-end align-center">
             <v-app-bar-nav-icon
               color="#20BF55"
               variant="outlined"
               @click="openNav"
             ></v-app-bar-nav-icon>
-          </v-col>
-          <v-col cols="9" class="d-flex align-center justify-end">
-            <img src="../../assets/Graduation_logo.png" width="150" alt="" />
           </v-col>
         </v-row>
       </v-container>
@@ -30,6 +35,7 @@ const openNav = () => {
 img {
   transform: scale(1.1);
   transition: 0.4s all ease-in-out;
+  cursor: pointer;
   &:hover {
     transform: scale(1.3);
   }

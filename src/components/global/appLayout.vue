@@ -1,6 +1,6 @@
 <template>
   <div class="app-layout">
-    <v-layout class="d-block">
+    <v-layout class="d-block overflow-x-hidden">
       <navDrawer />
       <v-main
         :style="`margin: ${
