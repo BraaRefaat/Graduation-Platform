@@ -24,7 +24,7 @@
               data-aos-duration="1000"
               class="d-flex align-center justify-center"
             >
-              <v-card class="content-card" color="#0f172a">
+              <v-card class="content-card w-100" color="#0f172a">
                 <v-tabs
                   dir="ltr"
                   v-model="tab"
@@ -200,7 +200,7 @@
                           base-color="#e8e5da"
                           true-icon="mdi-check-circle"
                           false-icon="mdi-close-circle"
-                          label="قمت بإنهاء الدروس"
+                          label="قمت بإنهاء الكورس"
                           v-model="done"
                           @click-="done = !done"
                           color="#20BF55"
