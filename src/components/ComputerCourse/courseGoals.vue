@@ -12,44 +12,42 @@
           </h2>
         </v-col>
         <v-row class="mt-10">
-          <v-row>
-            <v-col
-              cols="12"
-              class="px-10"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <v-window v-model="window" show-arrows reverse>
-                <template v-slot:prev="{ props }">
-                  <v-btn
-                    color="#20BF55"
-                    size="50"
-                    variant="text"
-                    class="rounded-circle"
-                    @click="props.onClick"
-                    ><v-icon size="50">mdi-chevron-right</v-icon></v-btn
-                  > </template
-                ><template v-slot:next="{ props }">
-                  <v-btn
-                    color="#20BF55"
-                    size="50"
-                    variant="text"
-                    class="rounded-circle"
-                    @click="props.onClick"
-                    ><v-icon size="50">mdi-chevron-left</v-icon></v-btn
-                  >
-                </template>
-                <v-window-item v-for="(goal, i) in goals" :key="i">
-                  <v-card
-                    height="200px"
-                    class="d-flex justify-center align-center"
-                  >
-                    <span class="goals-text">{{ goal }}</span>
-                  </v-card>
-                </v-window-item>
-              </v-window>
-            </v-col>
-          </v-row>
+          <v-col
+            cols="12"
+            class="px-10"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <v-window v-model="window" show-arrows reverse>
+              <template v-slot:prev="{ props }">
+                <v-btn
+                  color="#20BF55"
+                  size="30"
+                  variant="text"
+                  class="rounded-circle"
+                  @click="props.onClick"
+                  ><v-icon size="30">mdi-chevron-right</v-icon></v-btn
+                > </template
+              ><template v-slot:next="{ props }">
+                <v-btn
+                  color="#20BF55"
+                  size="30"
+                  variant="text"
+                  class="rounded-circle"
+                  @click="props.onClick"
+                  ><v-icon size="30">mdi-chevron-left</v-icon></v-btn
+                >
+              </template>
+              <v-window-item v-for="(goal, i) in goals" :key="i">
+                <v-card
+                  height="200px"
+                  class="d-flex justify-center align-center"
+                >
+                  <span class="goals-text">{{ goal }}</span>
+                </v-card>
+              </v-window-item>
+            </v-window>
+          </v-col>
         </v-row>
       </v-row>
     </v-container>
