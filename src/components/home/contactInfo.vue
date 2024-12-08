@@ -395,6 +395,37 @@ onMounted(() => {
 
 /* media queries */
 
+@media (min-width: 600px) {
+  .main,
+  .up,
+  .down {
+    gap: 1em !important;
+  }
+  .card1 {
+    width: 190px !important;
+    height: 190px !important;
+  }
+  .card2 {
+    width: 190px !important;
+    height: 190px !important;
+  }
+  .card3 {
+    width: 190px !important;
+    height: 190px !important;
+  }
+  .card4 {
+    width: 190px !important;
+    height: 190px !important;
+  }
+  .whatsapp,
+  .facebook,
+  .youtube,
+  .linkedin {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}
+
 @media (max-width: 960px) {
   .v-container {
     display: flex;

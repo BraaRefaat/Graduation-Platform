@@ -11,7 +11,7 @@
               alt=""
             />
           </v-col>
-          <v-col cols="9" class="d-flex justify-end align-center">
+          <v-col cols="9" class="d-flex justify-end align-center pl-8">
             <v-app-bar-nav-icon
               color="#20BF55"
               variant="outlined"
