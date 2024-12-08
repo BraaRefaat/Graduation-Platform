@@ -5,7 +5,7 @@
         <v-row dir="rtl">
           <v-col cols="12">
             <p>
-              Graduation, All copyrights reserved &copy;
+              منصة التخرج، جميع الحقوق محفوظة &copy;
               {{ new Date().getFullYear() }}
             </p>
           </v-col>

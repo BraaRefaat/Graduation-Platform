@@ -3,8 +3,8 @@
     <v-app>
       <heroSection />
       <goalsSection />
-      <ContactInfo />
       <AvailableCourses />
+      <ContactInfo />
     </v-app>
   </div>
 </template>
